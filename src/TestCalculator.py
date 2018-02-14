@@ -21,5 +21,8 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(7, add("7"))
         self.assertEqual(4, add("4"))
 
+    def test__given_one_number_of_two_digits(self):
+        self.assertEqual(11, add("11"))
+
     def test__given_empty_string(self):
         self.assertEqual(0, add(""))
