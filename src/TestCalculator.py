@@ -5,10 +5,12 @@ def add(numbers):
     if len(numbers) == 0:
         return 0
 
+    numbers_split = numbers.split(",")
+
     if len(numbers) == 1 or len(numbers) == 2:
         return int(numbers)
 
-    return int(numbers[0]) + int(numbers[3])
+    return int(numbers_split[0]) + int(numbers_split[1])
 
 
 class TestCalculator(unittest.TestCase):
