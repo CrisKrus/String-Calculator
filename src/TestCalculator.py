@@ -2,6 +2,9 @@ import unittest
 
 
 def add(numbers):
+    if len(numbers) == 0:
+        return 0
+
     if len(numbers) == 1:
         return int(numbers)
 
