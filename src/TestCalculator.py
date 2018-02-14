@@ -2,7 +2,7 @@ import unittest
 
 
 def add(numbers):
-    return 2
+    return int(numbers[0]) + int(numbers[3])
 
 
 class TestCalculator(unittest.TestCase):
