@@ -1,3 +1,4 @@
+import re
 import unittest
 
 
@@ -5,7 +6,7 @@ def add(numbers):
     if len(numbers) == 0:
         return 0
 
-    numbers_split = numbers.split(",")
+    numbers_split = re.compile("[,\n]").split(numbers)
 
     if len(numbers_split) == 1:
         return int(numbers)
