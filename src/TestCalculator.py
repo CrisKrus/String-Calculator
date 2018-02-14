@@ -8,4 +8,5 @@ def add(numbers):
 class TestCalculator(unittest.TestCase):
 
     def test__given_two_numbers_of_one_digit(self):
-        self.assertTrue(2, add("1, 1"))
+        self.assertEqual(2, add("1, 1"))
+        self.assertEqual(10, add("6, 4"))
