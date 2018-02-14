@@ -23,6 +23,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(7, add("7"))
         self.assertEqual(4, add("4"))
         self.assertEqual(11, add("11"))
+        self.assertEqual(1123, add("1123"))
 
     def test__given_empty_string(self):
         self.assertEqual(0, add(""))
