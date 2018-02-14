@@ -10,11 +10,11 @@ def add(numbers):
     if len(numbers_split) == 1:
         return int(numbers)
 
-    sum = 0
+    result = 0
     for n in numbers_split:
-        sum += int(n)
+        result += int(n)
 
-    return sum
+    return result
 
 
 class TestCalculator(unittest.TestCase):
