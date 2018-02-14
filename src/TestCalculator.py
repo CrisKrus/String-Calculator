@@ -6,7 +6,9 @@ def add(numbers):
     if len(numbers) == 0:
         return 0
 
-    numbers_split = re.compile("[,\n]").split(numbers)
+    pattern = "[,\n]"
+
+    numbers_split = re.compile(pattern).split(numbers)
 
     if len(numbers_split) == 1:
         return int(numbers)
@@ -19,6 +21,12 @@ def add(numbers):
 
 
 class TestCalculator(unittest.TestCase):
+
+    def test__given_empty_string(self):
+        self.assertEqual(0, add(""))
+
+    def test__given_other_delimiters(self):
+        self.assertEqual(34, add("//;22; 7 \n5"))
 
     def test__given_two_numbers(self):
         self.assertEqual(2, add("1, 1"))
@@ -34,6 +42,3 @@ class TestCalculator(unittest.TestCase):
 
     def test__given_more_than_two_numbers(self):
         self.assertEqual(28, add("1, 2, 3, 4, 5, 6, 7"))
-
-    def test__given_empty_string(self):
-        self.assertEqual(0, add(""))
