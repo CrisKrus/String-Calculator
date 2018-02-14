@@ -6,7 +6,10 @@ def add(numbers):
     if len(numbers) == 0:
         return 0
 
-    pattern = "[,\n]"
+    if numbers[0] == "/" and numbers[1] == "/":
+        pattern = "[" + numbers[2] + "\n]"
+    else:
+        pattern = "[,\n]"
 
     numbers_split = re.compile(pattern).split(numbers)
 
@@ -15,7 +18,8 @@ def add(numbers):
 
     result = 0
     for n in numbers_split:
-        result += int(n)
+        if n != "//":
+            result += int(n)
 
     return result
 
