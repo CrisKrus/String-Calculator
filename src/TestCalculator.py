@@ -5,11 +5,10 @@ def add(numbers):
     if len(numbers) == 0:
         return 0
 
-    numbers_split = numbers.split(",")
-
     if len(numbers) == 1 or len(numbers) == 2:
         return int(numbers)
 
+    numbers_split = numbers.split(",")
     return int(numbers_split[0]) + int(numbers_split[1])
 
 
