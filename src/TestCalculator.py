@@ -5,7 +5,7 @@ def add(numbers):
     if len(numbers) == 0:
         return 0
 
-    if len(numbers) == 1:
+    if len(numbers) == 1 or len(numbers) == 2:
         return int(numbers)
 
     return int(numbers[0]) + int(numbers[3])
